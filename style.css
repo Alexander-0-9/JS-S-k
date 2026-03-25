@@ -1,0 +1,162 @@
+/* Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Body */
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #000000, #0a000a);
+    color: #fff;
+}
+
+/* Container */
+main {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* Title */
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 3rem;
+    color: #ffffff; /* Neon blue */
+    text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000;
+    font-weight: bold;
+}
+
+/* Search box */
+.search-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 40px;
+    padding: 15px;
+    border-radius: 16px;
+    background: rgba(26, 0, 0, 0.8);
+    border: 2px solid #ff0000; /* Red border */
+    box-shadow: 0 0 15px #ff000055;
+}
+
+/* Input */
+input {
+    flex: 1;
+    padding: 14px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    border-radius: 12px;
+    background-color: #110000;
+    color: #ffffff; /* White text */
+    box-shadow: inset 0 0 5px #4702029c;
+}
+
+input::placeholder {
+    color: #888888;
+}
+
+input:focus {
+    border: 2px solid #cc0606; /* Blue highlight on focus */
+    box-shadow: 0 0 10px hsl(0, 95%, 32%);
+}
+
+/* Button */
+button {
+    padding: 14px 20px;
+    border: none;
+    border-radius: 12px;
+    background: #ff0000; /* Red button */
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0 0 10px #ff4444;
+}
+
+button:hover {
+    background: #cc0000;
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 0 20px #ff0000aa, 0 0 5px #ff1212 inset;
+}
+
+/* Results */
+#results {
+    display: grid;
+    gap: 25px;
+}
+
+/* Cards */
+.person-card {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    background: #00000000;
+    padding: 20px;
+    border-radius: 20px;
+    border: 2px solid #000000; /* Blue border */
+    box-shadow: 0 0 15px #130f0f44;
+    transition: 0.3s ease;
+}
+
+.person-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    border-color: #ff0000; /* Red on hover */
+    box-shadow: 0 0 25px #e75252aa, 0 0 10px #af030355 inset; /* White inner glow */
+}
+
+/* Image */
+.person-card img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #ff0000;
+    box-shadow: 0 0 10px #ff0000;
+}
+
+/* Text */
+.person-card h2 {
+    margin-bottom: 8px;
+    color: #ff0000; /* Red name */
+    text-shadow: 0 0 5px #ff5555;
+    font-size: 1.6rem;
+}
+
+.person-card p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #ffffff; /* White text */
+}
+
+/* Error */
+.error {
+    text-align: center;
+    color: #ff4444;
+    font-weight: bold;
+    font-size: 18px;
+    text-shadow: 0 0 5px #ff4444aa;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .search-container {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    .person-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .person-card img {
+        width: 100px;
+        height: 100px;
+    }
+}
